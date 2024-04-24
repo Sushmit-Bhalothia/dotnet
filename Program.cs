@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.OpenApi.Models;
 using dotnet.Services.WeaponService;
+using dotnet.Services.FightService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -42,7 +43,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IWeaponsService, WeaponService>();
-
+builder.Services.AddScoped<IFightService, FightService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
