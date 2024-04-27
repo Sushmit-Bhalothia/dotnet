@@ -20,6 +20,9 @@ namespace dotnet.Models
       public int Fights { get; set; }
       public int Victories { get; set; }
       public int Defeats { get; set; }
+      public List<Challenge>? Challenges { get; set; }
+
+    
 
         
     }
