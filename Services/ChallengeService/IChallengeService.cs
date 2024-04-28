@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using dotnet.Dtos.Challenge;
 
-namespace dotnet.Services.Challenge
+namespace dotnet.Services.ChallengeServices
 {
     public interface IChallengeService
     {

@@ -9,6 +9,7 @@ namespace dotnet.Dtos.Challenge
     {
         
         public int Challenged { get; set; }
+        public int Challenger { get; set; }
     
     }
 }

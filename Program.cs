@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.Filters;
 using Microsoft.OpenApi.Models;
 using dotnet.Services.WeaponService;
 using dotnet.Services.FightService;
-using dotnet.Services.Challenge;
+using dotnet.Services.ChallengeServices;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

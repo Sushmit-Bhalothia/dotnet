@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnet.Data;
 
@@ -11,9 +12,11 @@ using dotnet.Data;
 namespace dotnet.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240427110310_Challenges5")]
+    partial class Challenges5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,7 +62,7 @@ namespace dotnet.Migrations
 
                     b.HasIndex("CharacterId");
 
-                    b.ToTable("Challenges");
+                    b.ToTable("Challenge");
                 });
 
             modelBuilder.Entity("dotnet.Models.Character", b =>
@@ -216,13 +219,11 @@ namespace dotnet.Migrations
 
             modelBuilder.Entity("dotnet.Models.Challenge", b =>
                 {
-                    b.HasOne("dotnet.Models.Character", "Character")
+                    b.HasOne("dotnet.Models.Character", null)
                         .WithMany("Challenges")
                         .HasForeignKey("CharacterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Character");
                 });
 
             modelBuilder.Entity("dotnet.Models.Character", b =>

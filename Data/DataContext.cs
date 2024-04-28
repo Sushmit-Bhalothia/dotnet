@@ -24,5 +24,6 @@ namespace dotnet.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<Weapon> Weapons => Set<Weapon>();
         public DbSet<Skills> Skills => Set<Skills>();
+        public DbSet<Challenge> Challenges => Set<Challenge>();
     }
 }

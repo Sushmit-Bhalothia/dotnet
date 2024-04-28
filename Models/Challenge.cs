@@ -10,6 +10,8 @@ namespace dotnet.Models
         public int Id { get; set; }
         public int ChallengerId { get; set; }
         public string Result { get; set; } = "Pending";
+        public Character? Character { get; set; }
+        public int CharacterId { get; set; }
         
     }
 }
