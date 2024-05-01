@@ -28,6 +28,10 @@ namespace dotnet.Controllers
         public async Task<ActionResult<ServiceResponse<string>>> ChallengeCharacter(ChallengetDto challenge){
             return Ok(await _ChallengeService.ChallengeCharacter(challenge));
         }
+        [HttpGet("GetChallenge")]
+        public async Task<ActionResult<ServiceResponse<string>>> GetChallenge(int charId){
+            return Ok(await _ChallengeService.GetChallenge(charId));
+        }
         
     }
 }

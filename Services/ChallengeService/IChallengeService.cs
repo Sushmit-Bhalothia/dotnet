@@ -9,5 +9,6 @@ namespace dotnet.Services.ChallengeServices
     public interface IChallengeService
     {
         Task<ServiceResponse<String>> ChallengeCharacter(ChallengetDto challenge);
+        Task<ServiceResponse<String>> GetChallenge(int charId);
     }
 }
